@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1 roadmap1</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 60px;
+        }
+
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #444;
+        }
+
+        p {
+            color: #666;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+   <h1>1. Exploring the Differences Between HTTP/1.1 and HTTP/2</h1> 
+   <p>The evolution of the World Wide Web has brought about significant changes in the way we access and interact with information online. One crucial aspect of this transformation is the continuous improvement of communication protocols that facilitate data transfer between clients and servers. In this blog post, we'll delve into the key disparities between HTTP/1.1 and HTTP/2, two major versions of the Hypertext Transfer Protocol.</p>
+
+   <h2>HTTP/1.1: The Old Guard</h2>
+   <ul>
+       <li><strong>Connection Multiplexing:</strong> In HTTP/1.1, each connection can handle one request at a time, leading to a potential bottleneck in scenarios where multiple assets need to be loaded simultaneously. This sequential processing of requests and responses can result in higher latency, longer page load times, and decreased overall performance.</li>
+       <li><strong>Header Compression:</strong> Headers, containing metadata about the request or response, are sent with every HTTP request. HTTP/1.1 does not support header compression, resulting in redundant data being sent with each request and response, leading to increased overhead and slower performance.</li>
+       <li><strong>Resource Optimization:</strong> In HTTP/1.1, developers often resort to techniques like image sprites and domain sharding to optimize resource loading. These workarounds introduce complexities and may not be as effective in addressing the fundamental issues related to parallelization and resource loading.</li>
+   </ul>
+
+   <h2>HTTP/2: The Next Frontier</h2>
+   <ul>
+       <li><strong>Multiplexing:</strong> One of the most significant improvements in HTTP/2 is the introduction of multiplexing, allowing multiple requests and responses to be sent in parallel over a single connection. This concurrent processing reduces latency and enhances the efficiency of data transfer, resulting in faster page loads.</li>
+       <li><strong>Header Compression:</strong> HTTP/2 features header compression, which significantly reduces the amount of redundant header data transmitted between the client and server. This optimization leads to more efficient use of bandwidth and contributes to improved performance.</li>
+       <li><strong>Binary Protocol:</strong> While HTTP/1.1 relies on textual data, HTTP/2 uses a binary protocol, which is more compact and machine-friendly. This change simplifies parsing and processing, further contributing to a reduction in latency and enhanced performance.</li>
+       <li><strong>Server Push:</strong> HTTP/2 introduces server push, allowing servers to proactively push resources to clients before they are explicitly requested. This feature minimizes the need for additional round-trips, further accelerating page loading times.</li>
+   </ul>
+
+   <h2>Conclusion</h2>
+   <p>The shift from HTTP/1.1 to HTTP/2 represents a pivotal moment in the evolution of web protocols. With improvements in connection multiplexing, header compression, and the introduction of new features like server push, HTTP/2 aims to deliver a faster, more efficient, and responsive web experience. As web developers and businesses embrace this new standard, users can expect to enjoy reduced latency, quicker page loads, and an overall smoother browsing experience. The transition to HTTP/2 reflects the continuous commitment of the web community to innovation and optimization, ensuring that the World Wide Web remains a dynamic and user-friendly environment.</p>
+</body>
+    
+   </div>
+   <p>-----------------------------------------------------------</p>
+   <div>
+    <h1>2. Write a blog about objects and its internal representation in Javascript</h1>
+    <p>JavaScript, as a versatile and dynamic programming language, utilizes objects as a fundamental data structure. Understanding how objects are internally represented is essential for effective JavaScript development. Let's dive into the internals of JavaScript objects.</p>
+
+    <h2>The Basics of Objects in JavaScript</h2>
+    <p>In JavaScript, objects are collections of key-value pairs, where each key is a string (or a symbol) and each value can be any data type, including other objects. Objects in JavaScript can be created using the <code>Object</code> constructor or object literals:</p>
+
+    <pre><code>
+// Using the Object constructor
+const myObject = new Object();
+
+// Using object literals
+const myLiteralObject = {};
+    </code></pre>
+
+    <h2>Internal Representation of Objects</h2>
+    <p>Internally, JavaScript engines use various mechanisms to represent objects efficiently. One common approach is the use of a hash table, where keys are hashed, and the values are stored based on their hash codes. This enables fast access to values given their keys.</p>
+
+    <p>Objects in JavaScript can have properties and methods. Properties are essentially key-value pairs, while methods are functions associated with the object. The internal representation ensures efficient storage and retrieval of these properties and methods.</p>
+
+    <h2>Prototypes and Inheritance</h2>
+    <p>JavaScript supports prototypal inheritance, where objects can inherit properties and methods from other objects. This is achieved through a prototype chain. Each object in JavaScript has an internal link to another object called its prototype. If a property or method is not found on the current object, the JavaScript engine looks up the prototype chain to find it.</p>
+
+    <p>Understanding prototypes is crucial for efficient memory usage and avoiding redundant property storage across multiple objects.</p>
+
+    <h2>Object Serialization and JSON</h2>
+    <p>Objects in JavaScript can be serialized into JSON (JavaScript Object Notation) for data exchange. JSON is a text format that represents data objects and arrays. The internal representation of an object influences how it is serialized and deserialized.</p>
+
+    <h2>Conclusion</h2>
+    <p>Objects are at the core of JavaScript, and their internal representation plays a vital role in the language's functionality and performance. Developers benefit from a deep understanding of how objects are stored and accessed, enabling them to write efficient and maintainable code.</p>
+
+</div>
+<p>----------------------------------</p>
+<div>
+    <h1>4. Read about IP address, port, HTTP methods, MAC address</h1>
+
+    <h2>IP Address</h2>
+    <p>An <strong>IP address</strong> is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication.</p>
+    <code>Your IP address: <?php echo $_SERVER['REMOTE_ADDR']; ?></code>
+
+    <h2>Port</h2>
+    <p>A <strong>port</strong> is a communication endpoint used in networking. Ports are associated with specific processes running on a device.</p>
+    <code>Example Port: 80</code>
+
+    <h2>HTTP Methods</h2>
+    <p>HTTP supports various <strong>methods</strong> for communication between clients and servers. Common methods include GET, POST, PUT, DELETE, etc.</p>
+    <code>Current HTTP Method: <?php echo $_SERVER['REQUEST_METHOD']; ?></code>
+
+    <h2>MAC Address</h2>
+    <p>A <strong>MAC address</strong> is a unique identifier assigned to network interfaces for communications at the data link layer of a network segment.</p>
+    <code>Your MAC address: <?php echo shell_exec('getmac'); ?></code>
+
+</div>
+</body>
+</html>
